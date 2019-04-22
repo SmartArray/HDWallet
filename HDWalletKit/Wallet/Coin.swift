@@ -13,6 +13,7 @@ public enum Coin {
     case ethereum
     case litecoin
     case bitcoinCash
+    case digibyte
     
     //https://github.com/satoshilabs/slips/blob/master/slip-0132.md
     public var privateKeyVersion: UInt32 {
@@ -21,6 +22,8 @@ public enum Coin {
             return 0x019D9CFE
         case .bitcoin:
             return 0x0488ADE4
+        case .digibyte:
+            return 0x0488ade4
         default:
             return 0x0488ADE4
         }
@@ -32,6 +35,8 @@ public enum Coin {
             return 0x019DA462
         case .bitcoin:
             return 0x0488B21E
+        case .digibyte:
+            return 0x0488b21e
         default:
             return 0x0488B21E
         }
@@ -43,6 +48,8 @@ public enum Coin {
             return 0x30
         case .bitcoin:
             return 0x00
+        case .digibyte:
+            return 0x1e
         default:
             return 0x00
         }
@@ -55,6 +62,8 @@ public enum Coin {
             return 0xB0
         case .bitcoin:
             return 0x80
+        case .digibyte:
+            return 0x80
         default:
             return 0x80
         }
@@ -66,6 +75,8 @@ public enum Coin {
             return 0xB0
         case .bitcoin:
             return 0x80
+        case .digibyte:
+            return 0x3f
         default:
             return 0x80
         }
@@ -95,6 +106,8 @@ public enum Coin {
             return 60
         case .bitcoinCash:
             return 145
+        case .digibyte:
+            return 20
         }
     }
     
@@ -106,6 +119,8 @@ public enum Coin {
             return "litecoin"
         case .bitcoinCash:
             return "bitcoincash"
+        case .digibyte:
+            return "digibyte"
         default: return ""
         }
     }
